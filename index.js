@@ -9,6 +9,9 @@ module.exports = class MyselfMongo {
   async set(name, value) {
     await this.db.set(name, value)
   }
+  async setwithtime(name, value, time) {
+    await this.db.set(name, value, time)
+  }
   async get(n) {
     return await this.db.get(n) ? await this.db.get(n) : null
   }
@@ -18,5 +21,11 @@ module.exports = class MyselfMongo {
   async has(t) {
     const a = await this.db.has(t) 
     return a ? true : false
+  }
+  async dbping() {
+  return await this.db.ping()
+  }
+  async all() {
+  return await this.db.all()
   }
 };
