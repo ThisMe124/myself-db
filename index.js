@@ -12,5 +12,11 @@ module.exports = class MyselfMongo {
   async get(n) {
     return await this.db.get(n) ? await this.db.get(n) : null
   }
-  
+  async delete(t) {
+    await this.db.delete(t)
+  }
+  async has(t) {
+    const a = await this.db.has(t) 
+    return a ? true : false
+  }
 };
