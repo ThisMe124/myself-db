@@ -1,4 +1,4 @@
-# simple-db
+# myself-db
 Wrapper Database From quickmongo
 
 # notes
